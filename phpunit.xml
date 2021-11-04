@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xsi:noNamespaceSchemaLocation="https://schema.phpunit.de/9.3/phpunit.xsd" 
+    colors="true" 
+    processIsolation="false" 
+    stopOnFailure="false"
+>
+  <coverage>
+    <include>
+      <directory suffix=".php">src/</directory>
+    </include>
+  </coverage>
+  <php>
+    <ini name="error_reporting" value="32767"/>
+    <env name="pf_dsn" value="mysql:dbname=pf_test;host=localhost"/>
+    <env name="pf_user" value="pf_user"/>
+    <env name="pf_pass" value="password"/>
+  </php>
+</phpunit>
