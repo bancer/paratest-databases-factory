@@ -69,8 +69,8 @@ There are two ways how to run phpunit tests in parallel:
         and writes its output to a file in tmp folder, starts the second test suite and brings it output 
         to the foreground. This way two test suites are run in parallel. 
         Run the slowest test suite the last.
-        * Execute `cat ./tmp/ci-1.out` to print the results of the first test suite to the console.
-        * Execute `grep "OK" ./tmp/ci-1.out` or similar command to check that the first test suite successfully finished.
+        * Execute `cat /tmp/ci-1.out` to print the results of the first test suite to the console.
+        * Execute `grep "OK" /tmp/ci-1.out` or similar command to check that the first test suite successfully finished.
 
 2. By using paratest library.
     * Pros: 
