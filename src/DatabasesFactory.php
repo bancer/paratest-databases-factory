@@ -23,7 +23,7 @@ class DatabasesFactory
      * @param string $dsn The Data Source Name, or DSN, contains the information required to connect to the database.
      * @return $this
      */
-    public function setDsn(string $dsn)
+    public function setDsn($dsn)
     {
         $this->pdoDsn = $dsn;
         return $this;
@@ -35,7 +35,7 @@ class DatabasesFactory
      * @param string $username The user name for the DSN string. This parameter is optional for some PDO drivers.
      * @return $this
      */
-    public function setUsername(string $username)
+    public function setUsername($username)
     {
         $this->pdoUsername = $username;
         return $this;
@@ -47,7 +47,7 @@ class DatabasesFactory
      * @param string $password The password for the DSN string. This parameter is optional for some PDO drivers.
      * @return $this
      */
-    public function setPassword(string $password)
+    public function setPassword($password)
     {
         $this->pdoPassword = $password;
         return $this;
@@ -59,7 +59,7 @@ class DatabasesFactory
      * @param array $options A key=>value array of driver-specific connection options.
      * @return $this
      */
-    public function setOptions(array $options)
+    public function setOptions($options)
     {
         $this->pdoOptions = $options;
         return $this;
@@ -96,7 +96,7 @@ class DatabasesFactory
      * @param string $schema Database name.
      * @return \PDOStatement|false PDOStatement object, or false on failure.
      */
-    public function createDatabase(string $schema)
+    public function createDatabase($schema)
     {
         if (getenv('TEST_TOKEN') !== false) { // Using paratest
             $schema .= getenv('TEST_TOKEN');
